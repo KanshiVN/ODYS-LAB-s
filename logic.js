@@ -1,4 +1,6 @@
-let tl = gsap.timeline()
+
+function LoadingAnimation(){
+    let tl = gsap.timeline()
 
 tl.from(".line h1",{
     y:150,
@@ -36,3 +38,24 @@ tl.from("#page1",{
     delay:0.2,
     ease:Power4
 })
+
+tl.from("#hero1  h1,#hero2 h1, #hero3 h2,#hero4 h1",{
+    y:100,
+    stagger:0.2
+})
+tl.from("#nav",{
+    opacity:0
+})  
+
+}
+function MouseHover(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#crsr",{
+            left:dets.x,
+            top:dets.y,
+        })
+    })
+}
+
+LoadingAnimation();
+MouseHover();

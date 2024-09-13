@@ -6,19 +6,26 @@
     font-family: "Plain Light";
 }
 html,body{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+#crsr{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: fixed;
+    z-index: 900;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
 }
 
 #main{
     position:relative;
     background-color:black;
 }
-#page1{
-    height: 100vh;
-    width: 100%;
-    background-color: #191010;
-}
+
 #loader{
     height: 100%;
     width: 100%;
@@ -80,4 +87,73 @@ html,body{
         font-family: "silk serif";
         color:transparent
     }
+}
+/* Loader css ends here */
+
+/* Css for page 1 starts here */
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #191010;
+}
+
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw 4.5vw;
+}
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    
+}
+#nav-part2 h1{
+    font-size: 1.5vw;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.hero{
+    /* position: relative; */
+    line-height: 7vw;
+    margin-left: 27vw;
+    width: 60vw;
+    height: fit-content;
+    overflow: hidden;
+    bottom: 10vh;
+    position:relative;
+    display: flex;
+    align-items: center;
+    
+}
+#page01{
+
+    left:18vw;
+    top:5vh;
+    font-family:"silk serif";
+    font-size: 4vw;
+    font-weight: 300;
+    position: relative;
+}
+.hero h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 600;
+}
+.hero h2{
+    font-size: 7vw;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 600;
+}
+
+.hero h2:hover{
+    -webkit-text-stroke: 1px white;
+    color:transparent;
+    font-weight: 500;
 }
